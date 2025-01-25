@@ -1,0 +1,87 @@
+.fiche-logement-info {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   .fiche-logement-title-tags {
+      display: flex;
+      flex-direction: column;
+      .fiche-logement-info-title {
+         margin-bottom: 20px;
+         h1 {
+            color: $color-items;
+            font-size: 36px;
+            font-weight: 500;
+         }
+         p {
+            color: black;
+            font-size: 18px;
+            font-weight: 500;
+         }
+      }
+      .logement-tags {
+         height: 30px;
+         .logement-tag {
+            background-color: $color-items;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            padding: 5px 25px;
+            border-radius: 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            margin-bottom: 2px;
+         }
+      }
+   }
+   .fiche-logement-host-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      margin-top: 15px;
+      .fiche-logement-info-host {
+         margin-left: auto;
+         display: flex;
+         align-items: center;
+         align-self: flex-start;
+         text-align: right;
+         margin-bottom: 20px;
+         img {
+            border-radius: 50%;
+            height: 64px;
+         }
+         p {
+            font-size: 18px;
+            margin-right: 10px;
+            width: 80px;
+         }
+      }
+      .logement-rating {
+         margin-top: 20px;
+         margin-bottom: 20px;
+         .logement-star {
+            margin-left: 8px;
+         }
+      }
+   }
+   /*** Media Queries ***/
+   @media (min-width: 780px) {
+      flex-direction: row;
+      .fiche-logement-title-tags {
+         width: calc(100% - 165px);
+      }
+      .fiche-logement-host-rating {
+         flex-direction: column;
+         width: fit-content;
+         margin-top: 0;
+         .fiche-logement-info-host {
+            position: initial;
+            align-self: flex-start;
+         }
+         .logement-rating {
+            margin-left: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+         }
+      }
+   }
+}
